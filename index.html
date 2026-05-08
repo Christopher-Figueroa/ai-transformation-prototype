@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Financial Filing Analysis Engine | Offline Prototype</title>
+<title>AI Transformation Use Case Prototype | Financial Filing Analysis Engine</title>
 <style>
 :root{
   --body-bg:#e8edf2; --text:#2c3e50; --panel-bg:#f3f7fa; --card-bg:#ffffff; --card2-bg:#e4edf3;
@@ -42,20 +42,31 @@ canvas{width:100%;height:340px;display:block;background:var(--card-bg);border:1p
 .bot-panel{max-height:0;overflow:hidden;transition:max-height .45s ease}.bot-panel.open{max-height:1500px;overflow:visible}
 .bot-inner{display:grid;grid-template-columns:230px 1fr;gap:18px;padding:20px 34px 28px}.side{border-right:1px solid var(--border-color);padding-right:16px}.side h3{color:#145ed6;margin:0 0 12px}.topic{display:block;width:100%;text-align:left;border:0;background:transparent;border-radius:9px;padding:9px 8px;cursor:pointer;color:var(--text)}.topic:hover{background:var(--card2-bg)}.ready{font-size:13px;color:#00856f;margin-top:14px}.chat{min-height:410px;display:flex;flex-direction:column}.messages{background:var(--message-bg);border:1px solid var(--border-color);border-radius:14px;padding:16px;min-height:250px;max-height:520px;overflow-y:auto}.msg{max-width:86%;padding:13px 15px;border-radius:13px;margin:10px 0}.msg.bot{background:var(--card2-bg)}.msg.user{background:linear-gradient(135deg,var(--blue),var(--teal));color:white;margin-left:auto}.msg h4{margin:0 0 6px;color:#145ed6}.msg.user h4{color:white}.cite{display:block;margin-top:10px;color:var(--muted-text);font-size:12px;border-top:1px solid rgba(80,100,110,.25);padding-top:8px}.input-row{display:flex;gap:8px;margin-top:12px}textarea{flex:1;resize:vertical;min-height:60px;border:1px solid var(--border-color);border-radius:10px;padding:12px;font:inherit;background:var(--input-bg);color:var(--text)}button.send{width:72px;border:0;border-radius:10px;background:var(--blue);color:white;font-weight:700;cursor:pointer}.actions{display:flex;justify-content:space-between;align-items:center;margin-top:8px;color:var(--muted-text);font-size:12px}.reset{border:1px solid var(--border-color);border-radius:8px;background:transparent;padding:6px 10px;color:var(--muted-text);cursor:pointer}
 table{border-collapse:collapse;width:100%;margin-top:10px;font-size:14px}td,th{border-bottom:1px solid var(--border-color);padding:8px;text-align:right}th:first-child,td:first-child{text-align:left}
+
+.alignment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}.alignment-tile{background:var(--card2-bg);border:1px solid var(--border-color);border-radius:12px;padding:16px}.alignment-tile h3{margin:0 0 8px;color:#145ed6;font-size:16px}.alignment-tile p{margin:0;font-size:13px;color:var(--muted-text)}.role-note{border-left:4px solid var(--teal);background:var(--message-bg);padding:14px 16px;border-radius:10px;margin-top:18px}.tagline{font-size:14px;color:var(--muted-text);text-align:center;margin-top:-8px}
+@media(max-width:900px){.alignment-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.alignment-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.header,.bar{padding-left:18px;padding-right:18px}.bot-inner{grid-template-columns:1fr;padding:16px}.side{border-right:0;border-bottom:1px solid var(--border-color);padding-bottom:12px}.badges{display:none}h1{font-size:22px}.msg{max-width:100%}}
 </style>
 </head>
 <body>
 <header class="header">
-  <div class="brand"><div class="logo"></div><div><h1>Financial Filing Analysis Engine</h1><p class="subtitle">AAPL 10-K Demo • FY2022–FY2025 • Offline analytical prototype</p></div></div>
-  <div class="badges"><span class="badge">📊 10-K Analysis</span><span class="badge">🍎 AAPL Demo</span><span class="badge">⚡ Offline</span><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙 Dark</button></div>
+  <div class="brand"><div class="logo"></div><div><h1>AI Transformation Use Case Prototype</h1><p class="subtitle">Financial filing analysis engine • AAPL demo dataset • Offline, source-labeled prototype</p></div></div>
+  <div class="badges"><span class="badge">AI Use Case</span><span class="badge">Financial Data</span><span class="badge">Offline Prototype</span><button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙 Dark</button></div>
 </header>
 <main class="wrap">
 <section class="card overview">
-  <h2>Apple Inc. Financial Overview</h2>
-  <p><strong>Apple Inc. (AAPL)</strong> is used here as a public-company demonstration dataset. The prototype converts structured data from annual Form 10-K filings into a queryable, executive-style financial analysis experience.</p>
-  <p>The focus is not investment advice. The focus is the operating model: source-based data extraction, reusable analysis logic, lightweight automation, and a polished user interface that can be adapted for other public companies.</p>
-  <p>This page is self-contained and runs locally in a browser. No backend, API key, Python runtime, or internet connection is required after the page is saved.</p>
+  <h2>AI Transformation Use Case: Financial Data Structuring & Analysis</h2>
+  <p class="tagline">A practical prototype showing how an AI-enabled workflow can move from idea to usable business tool.</p>
+  <p><strong>This prototype demonstrates how public financial filings can be transformed into structured, queryable insights and visualizations</strong> to support faster decision-making and reduce manual analysis effort.</p>
+  <p>Apple Inc. (AAPL) is used as the demonstration dataset. The design is intentionally reusable: the same framework can be adapted to investment data analysis, client reporting workflows, risk and regulatory reviews, or internal knowledge management.</p>
+  <p>The tool is fully self-contained and runs locally in a browser. No backend, API key, Python runtime, or internet connection is required after the page is saved.</p>
+  <div class="alignment-grid">
+    <div class="alignment-tile"><h3>1. Use Case</h3><p>Turns a high-friction manual review process into a structured, searchable analysis experience.</p></div>
+    <div class="alignment-tile"><h3>2. Prototype</h3><p>Delivers a working front-end proof of concept using embedded source data and lightweight matching logic.</p></div>
+    <div class="alignment-tile"><h3>3. Adoption</h3><p>Packages technical analysis into a simple interface for non-technical stakeholders and business users.</p></div>
+    <div class="alignment-tile"><h3>4. Scale</h3><p>Designed so the knowledge base can be swapped for another company, process, or business domain.</p></div>
+  </div>
+  <div class="role-note"><strong>Role relevance:</strong> This is intended to demonstrate AI transformation thinking: identifying a practical use case, structuring data, designing a usable workflow, and connecting automation to efficiency, decision-making, and governance.</div>
   <p class="note"><em>Note: The assistant provides preloaded analytical summaries, source labels, and interactive charts where applicable.</em></p>
 </section>
 <section class="card chart-area" id="chart-area">
@@ -69,16 +80,16 @@ table{border-collapse:collapse;width:100%;margin-top:10px;font-size:14px}td,th{b
 <section class="signature">
   <strong>✦ Designed & Built by Christopher Figueroa</strong><br/>
   AAPL SEC Filing Analysis • Offline Financial Research Tool<br/>
-  <span class="mono">FinBot • Version 1.0 • May 2026</span>
+  <span class="mono">Analysis Assistant • Reusable job submission prototype • May 2026</span>
 </section>
 </main>
 <section class="bot-strip" id="bot">
-  <div class="attention" id="attention" onclick="toggleBot()">👆 Have a financial question? FinBot is ready to analyze — click to open ▼</div>
-  <div class="bar" onclick="toggleBot()"><div class="logo" style="width:34px;height:34px"></div><div><div class="bar-title">FinBot — AAPL SEC Filing Analyzer</div><div class="bar-sub">Fully offline • FY2022–FY2025 • Form 10-K data embedded</div></div><div class="badges"><span class="badge">📊 10-K Analysis</span><span class="badge">🍎 AAPL</span><span class="badge">⚡ Offline</span></div><div class="arrow">▼</div></div>
+  <div class="attention" id="attention" onclick="toggleBot()">👆 Explore the AI use case and financial demo — click to open ▼</div>
+  <div class="bar" onclick="toggleBot()"><div class="logo" style="width:34px;height:34px"></div><div><div class="bar-title">Analysis Assistant — Financial Filing Prototype</div><div class="bar-sub">AI transformation use case • Fully offline • FY2022–FY2025 AAPL 10-K data embedded</div></div><div class="badges"><span class="badge">AI Use Case</span><span class="badge">AAPL Dataset</span><span class="badge">Offline</span></div><div class="arrow">▼</div></div>
   <div class="bot-panel" id="panel">
     <div class="bot-inner">
-      <aside class="side"><h3>Analysis Topics</h3><button class="topic" onclick="askTopic('revenue')">💰 Total Revenue</button><button class="topic" onclick="askTopic('iphone')">📱 iPhone Revenue</button><button class="topic" onclick="askTopic('services')">⚙️ Services Revenue</button><button class="topic" onclick="askTopic('gross')">📈 Gross Margin</button><button class="topic" onclick="askTopic('income')">💵 Net Income & EPS</button><button class="topic" onclick="askTopic('cashflow')">🟢 Operating Cash Flow</button><button class="topic" onclick="askTopic('capex')">🏗️ Capital Expenditures</button><button class="topic" onclick="askTopic('buybacks')">🔁 Share Buybacks</button><button class="topic" onclick="askTopic('overview')">📋 Executive Summary</button><div class="ready">● Ready</div></aside>
-      <section class="chat"><div class="messages" id="messages"><div class="msg bot"><h4>FinBot — AAPL SEC Filing Analyzer</h4>Ask me anything about Apple’s financial performance across FY2022–FY2025. All data in this demo is embedded directly in the file and labeled to Apple Form 10-K source sections.</div></div><div class="input-row"><textarea id="q" placeholder="Ask FinBot a question..."></textarea><button class="send" onclick="askFreeform()">Send</button></div><div class="actions"><button class="reset" onclick="resetChat()">↻ Reset</button><span>Shift + Enter for new line • Enter to send</span></div></section>
+      <aside class="side"><h3>Analysis Topics</h3><button class="topic" onclick="askTopic('relevance')">🎯 Role Relevance</button><button class="topic" onclick="askTopic('usecase')">🧭 AI Use Case</button><button class="topic" onclick="askTopic('governance')">🛡️ Governance & Controls</button><button class="topic" onclick="askTopic('scale')">📦 Scaling Model</button><button class="topic" onclick="askTopic('revenue')">💰 Total Revenue</button><button class="topic" onclick="askTopic('iphone')">📱 iPhone Revenue</button><button class="topic" onclick="askTopic('services')">⚙️ Services Revenue</button><button class="topic" onclick="askTopic('gross')">📈 Gross Margin</button><button class="topic" onclick="askTopic('income')">💵 Net Income & EPS</button><button class="topic" onclick="askTopic('cashflow')">🟢 Operating Cash Flow</button><button class="topic" onclick="askTopic('capex')">🏗️ Capital Expenditures</button><button class="topic" onclick="askTopic('buybacks')">🔁 Share Buybacks</button><button class="topic" onclick="askTopic('overview')">📋 Executive Summary</button><div class="ready">● Ready</div></aside>
+      <section class="chat"><div class="messages" id="messages"><div class="msg bot"><h4>Analysis Assistant — Financial Filing Prototype</h4>Ask about the AI transformation use case, implementation model, governance approach, or Apple financial performance across FY2022–FY2025. The demo data is embedded directly in the file and labeled to Apple Form 10-K source sections.</div></div><div class="input-row"><textarea id="q" placeholder="Ask the assistant a question..."></textarea><button class="send" onclick="askFreeform()">Send</button></div><div class="actions"><button class="reset" onclick="resetChat()">↻ Reset</button><span>Shift + Enter for new line • Enter to send</span></div></section>
     </div>
   </div>
 </section>
@@ -110,6 +121,7 @@ const DATA = {
   share_repurchases:[89.402,77.550,94.949,90.711]
 };
 const SOURCES = {
+  prototype:"Source: Prototype design summary; aligned to AI transformation, adoption, governance, and workflow redesign responsibilities from the target role.",
   ops:"Source: Apple Inc. Form 10-K, FY2025 / FY2024 / FY2023, Consolidated Statements of Operations and Revenue note.",
   cash:"Source: Apple Inc. Form 10-K, FY2025 / FY2024 / FY2022, Consolidated Statements of Cash Flows.",
   derived:"Source: Apple Inc. Form 10-K, Consolidated Statements of Operations. Gross margin percentage is derived as gross margin divided by total net sales."
@@ -117,6 +129,14 @@ const SOURCES = {
 function fmt(n,suffix="$"){return suffix==="%" ? n.toFixed(1)+"%" : "$"+n.toFixed(1)+"B"}
 function yoy(arr){return ((arr[arr.length-1]-arr[0])/arr[0]*100).toFixed(1)}
 const KB = {
+  relevance:{title:"Role Relevance", keys:["role","relevance","job","confluence","fit","transformation lead"], data:null, source:SOURCES.prototype,
+    answer:`This prototype is designed to demonstrate AI transformation capability rather than investment analysis alone. It shows how a business problem can be translated into a working tool: identify a high-friction workflow, structure source data, create a usable front-end experience, and support adoption through clear outputs and source labels. That maps directly to AI transformation work where the value is not just the model, but the operating discipline around use case selection, adoption, governance, and measurable business outcomes.`},
+  usecase:{title:"AI Use Case Model", keys:["use case","pilot","prototype","workflow","automation","manual process"], data:null, source:SOURCES.prototype,
+    answer:`The use case is intentionally simple and business-facing: reduce manual effort in reviewing public filings by converting source data into structured, queryable insights. The prototype simulates a pilot-to-scale pathway: start with a narrow, testable workflow; prove usefulness with an interactive demo; then expand the knowledge base or apply the same pattern to client reporting, risk reviews, regulatory content, or internal knowledge repositories.`},
+  governance:{title:"Governance & Controls", keys:["governance","controls","risk","safe","responsible","compliance","guardrails"], data:null, source:SOURCES.prototype,
+    answer:`The assistant is deliberately constrained. It uses embedded data, controlled response logic, source labels, and no external API calls. This design demonstrates a governance-first mindset: reduce hallucination risk, keep answers traceable, maintain control over source content, and avoid uncontrolled data movement. In an enterprise setting, the same principles would support AI guardrails, usage policies, compliance review, and safe adoption.`},
+  scale:{title:"Scaling Model", keys:["scale","scalable","adoption","roadmap","implementation","operating model"], data:null, source:SOURCES.prototype,
+    answer:`The framework is scalable because the page structure and interaction model remain stable while the knowledge base can be swapped or expanded. A similar pattern could support different companies, financial products, client reporting packages, operational procedures, or risk and regulatory materials. The key transformation concept is repeatability: one reusable interface, multiple controlled knowledge domains, and a clear path from pilot to everyday use.`},
   revenue:{title:"Total Revenue", keys:["revenue","sales","net sales","top line"], data:DATA.revenue, note:"Total net sales ($B)", source:SOURCES.ops,
     answer:`Apple total net sales were $394.3B in FY2022, $383.3B in FY2023, $391.0B in FY2024, and $416.2B in FY2025. The period shows a decline in FY2023, modest recovery in FY2024, and stronger growth in FY2025. Over the four-year window, total net sales increased ${yoy(DATA.revenue)}% from FY2022 to FY2025.`},
   iphone:{title:"iPhone Revenue", keys:["iphone","phone","smartphone"], data:DATA.iphone, note:"iPhone net sales ($B)", source:SOURCES.ops,
@@ -145,7 +165,7 @@ function askTopic(key){respond(key, document.querySelector(`button[onclick="askT
 function findKey(q){q=q.toLowerCase(); let best='overview',score=0; for(const [k,e] of Object.entries(KB)){let s=0; e.keys.forEach(term=>{ if(q.includes(term)) s+= term.split(" ").length>1?3:1 }); if(s>score){score=s;best=k}} return best}
 function askFreeform(){const el=document.getElementById('q'); const q=el.value.trim(); if(!q)return; el.value=''; respond(findKey(q), q)}
 document.getElementById('q').addEventListener('keydown', e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();askFreeform();}});
-function resetChat(){document.getElementById('messages').innerHTML='<div class="msg bot"><h4>FinBot — AAPL SEC Filing Analyzer</h4>Ask me anything about Apple’s financial performance across FY2022–FY2025. All data in this demo is embedded directly in the file and labeled to Apple Form 10-K source sections.</div>'}
+function resetChat(){document.getElementById('messages').innerHTML='<div class="msg bot"><h4>Analysis Assistant — Financial Filing Prototype</h4>Ask about the AI transformation use case, implementation model, governance approach, or Apple financial performance across FY2022–FY2025. The demo data is embedded directly in the file and labeled to Apple Form 10-K source sections.</div>'}
 function addChart(key){if(!chartStack.includes(key)) chartStack.push(key); activeKey=key; renderTabs(); renderChart();}
 function clearCharts(){chartStack=[];activeKey=null;document.getElementById('chart-shell').classList.remove('active');document.getElementById('placeholder').style.display='block'}
 function renderTabs(){document.getElementById('placeholder').style.display='none';document.getElementById('chart-shell').classList.add('active');const tabs=document.getElementById('tabs');tabs.innerHTML='';chartStack.forEach(k=>{const b=document.createElement('button');b.className='tab '+(k===activeKey?'active':'');b.textContent=KB[k].title;b.onclick=()=>{activeKey=k;renderTabs();renderChart();};tabs.appendChild(b)});const c=document.createElement('button');c.className='clear';c.textContent='Clear All';c.onclick=clearCharts;tabs.appendChild(c)}
